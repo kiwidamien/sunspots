@@ -38,3 +38,4 @@ In this approach, a RNN is trained to predict values using the first 2000 months
 
 #### Ref1 https://iwringer.wordpress.com/2015/11/17/anomaly-detection-concepts-and-techniques/
 #### Ref2 https://www.datascience.com/blog/python-anomaly-detection
+#### Ref3 https://blog.statsbot.co/time-series-prediction-using-recurrent-neural-networks-lstms-807fa6ca7f
