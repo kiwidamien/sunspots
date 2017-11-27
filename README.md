@@ -20,17 +20,17 @@ The project described here uses sunspot data, taken from [Ref2](#Ref2). This is 
 
 ## Approaches
 
-1. **Time series**
+### 1. Time series
 This was the original approach in [Ref2](#Ref2). A point is determined to be an outlier if the number of sunspots lies too far away from the moving average value. Specifically, the moving average is calculated, and then the residual (difference between moving average and predicted values) is taken. The standard deviation of the residuals gives a rough idea how good a job the moving average does. A point that is more than 3 standard deviations from the moving average is labelled an outlier / anomaly.
 
   There are two slightly different approaches to determine the standard deviation. One is to use all the residuals in the data set. The other is to use the "moving" standard deviation as well.
 
   This code mostly duplicates what exists in [Ref2](#Ref2), but tidies it up a little bit, and eliminates some now depreciated functions.
 
-2. **RNN**
+### 2. RNN
 In this approach, a RNN is trained to predict values using the first 2000 months as training data. The predictions of the forecasting model, where you give `n_steps` input points to the sequence and use it to predict the next point works reasonably well. The generative approach, where you give the first `n` months and then just keep generating predictions suffers from the vanishing gradient problem.
 
-3. **LTSM**
+### 3. LTSM
 
   [ ] To be implemented
 
